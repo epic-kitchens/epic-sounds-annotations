@@ -1,8 +1,6 @@
 # Baseline models for EPIC-SOUNDS
 
-The code in this repo is a condensed clone from [https://github.com/facebookresearch/SlowFast](https://github.com/facebookresearch/SlowFast).
-
-It contains code to train and run inference on the [EPIC-SOUNDS Dataset](https://epic-kitchens.github.io/epic-sounds/) for both [Auditory Slow-Fast](https://github.com/ekazakos/auditory-slow-fast) and [Self-Supervised Audio Spectrogram Transformer (SSAST).](https://github.com/YuanGongND/ssast)
+The code in this repo is a condensed clone from [https://github.com/facebookresearch/SlowFast](https://github.com/facebookresearch/SlowFast). It contains code to train, validate and compute test scores on the [EPIC-SOUNDS Dataset](https://epic-kitchens.github.io/epic-sounds/) for both [Auditory Slow-Fast](https://github.com/ekazakos/auditory-slow-fast) and [Self-Supervised Audio Spectrogram Transformer (SSAST).](https://github.com/YuanGongND/ssast)
 
 ## Pretrained Models
 
@@ -46,7 +44,7 @@ NUM_GPUS num_gpus \
 OUTPUT_DIR /path/to/outpur_dir \
 EPICSOUNDS.AUDIO_DATA_FILE /path/to/EPIC_audio.hdf5 \
 EPICSOUNDS.ANNOTATIONS_DIR /path/to/annotations \
-TRAIN.CHECKPOINT_FILE_PATH /path/to/SLOWFAST_EPIC.pyth
+TRAIN.CHECKPOINT_FILE_PATH /path/to/SLOWFAST_EPIC_SOUNDS.pyth
 ```
 
 To fine-tune Self-Supervised Spectrogram Transformer, run:
@@ -58,7 +56,7 @@ NUM_GPUS num_gpus \
 OUTPUT_DIR /path/to/outpur_dir \
 EPICSOUNDS.AUDIO_DATA_FILE /path/to/EPIC_audio.hdf5 \
 EPICSOUNDS.ANNOTATIONS_DIR /path/to/annotations \
-TRAIN.CHECKPOINT_FILE_PATH /path/to/SSAST-Base-Patch-400.pth
+TRAIN.CHECKPOINT_FILE_PATH /path/to/SSAST_EPIC_SOUNDS.pyth
 ```
 
 To train either model from scratch, remove the argument `TRAIN.CHECKPOINT_FILE_PATH`.
