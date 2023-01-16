@@ -24,9 +24,6 @@ module purge
 # Run the application
 nvidia-smi
 
-# Move up to root directory
-cd ..
-
 # Initialise environment
 PATH_TO_EPIC_SOUNDS_CONDA_ENV = ""
 PATH_TO_SPEC_AUGMENT = ""

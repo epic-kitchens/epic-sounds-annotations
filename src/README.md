@@ -30,7 +30,7 @@ Requirements:
 
 The dataset in this codebase uses the [HDF5 version](https://epic-kitchens.github.io/epic-sounds/) of EPIC-SOUNDS. To install, complete the steps as follow:
 
-- From the annotation repository of EPIC-SOUNDS e.g. the parent directory of this `src` folder, download: `EPIC_Sounds_train.pkl`, `EPIC_Sounds_validation.pkl` and `EPIC_Sounds_recognition_test.pkl`. `EPIC_Sounds_train.pkl`, `EPIC_Sounds_validation.pkl` may be used for training and validation, whilst `EPIC_Sounds_recognition_test.pkl` can be used to generate an output that can be converted into a submission to the [Audio-Bassed Interaction Recognition Challenge](https://github.com/epic-kitchens/C9-epic-sounds)
+- From the annotation repository of EPIC-SOUNDS e.g. the parent directory of this `src` folder, download: `EPIC_Sounds_train.pkl`, `EPIC_Sounds_validation.pkl` and `EPIC_Sounds_recognition_test.pkl`. `EPIC_Sounds_train.pkl`, `EPIC_Sounds_validation.pkl` may be used for training and validation, whilst `EPIC_Sounds_recognition_test.pkl` can be used to generate an output that can be converted into a submission to the [Audio-Bassed Interaction Recognition Challenge](https://github.com/epic-kitchens/C9-epic-sounds).
 - Download the HDF5 file [here](https://epic-kitchens.github.io/epic-sounds/)
 
 **NOTE** For this directory, you should install and pass arugments for the `.pkl` annotation files only, rather than the `.csv` files.
@@ -108,12 +108,12 @@ EPICSOUNDS.TEST_LIST EPIC_Sounds_recognition_test_timestamps.pkl
 
 If you are using [Slurm](https://slurm.schedmd.com/documentation.html) We have provided some example scripts in `slurm_scripts` folder where the following arguments must be filled in:
 
-- PATH_TO_EPIC_SOUNDS_CONDA_ENV: Path to the epic_sounds conda environment you installed in the previous step.
-- PATH_TO_SPEC_AUGMENT: Path to where you installed [SpecAugment](https://github.com/zcaceres/spec_augment)
-- PATH_TO_SLOWFAST_DIR: Path this repositorys `slowfast` directory
-- OUTPUT_DIR: Where you wish to save the output from the scripts
-- ANNOTATIONS_DIR: Path to the EPIC-SOUNDS annotation `.pkl` files in the parent directory of this `src` folder
-- PATH_TO_HDF5_FILE: Path to the `EPIC_audio.hdf5` file.
-- PATH_TO_PRETRAINED_MODEL: Path to pretrained model, if using.
+- `PATH_TO_EPIC_SOUNDS_CONDA_ENV`: Path to the epic_sounds conda environment you installed in the previous step.
+- `PATH_TO_SPEC_AUGMENT`: Path to where you installed [SpecAugment](https://github.com/zcaceres/spec_augment)
+- `PATH_TO_SLOWFAST_DIR`: Path this repositorys `slowfast` directory
+- `OUTPUT_DIR: Where you wish to save the output from the scripts
+- `ANNOTATIONS_DIR`: Path to the EPIC-SOUNDS annotation `.pkl` files in the parent directory of this `src` folder
+- `PATH_TO_HDF5_FILE`: Path to the `EPIC_audio.hdf5` file.
+- `PATH_TO_PRETRAINED_MODEL`: Path to pretrained model, if using.
 
-You will also need to edit the `#SBATCH` parameters in the slurm script to suit your environment.
+You will also need to edit the `#SBATCH` parameters in the slurm script to suit your environment. You can submit training scripts for either model to the queue by `sbatch train_slowfast.sh` or `sbatch train_ssast.sh`, or you can run validation by submitting `sbatch validate_slowfast.sh` or `sbatch validate_ssast.sh`. Scores for the [Audio-Bassed Interaction Recognition Challenge](https://github.com/epic-kitchens/C9-epic-sounds) can be run by `sbatch test_slowfast.sh` or `sbatch test_ssast.sh`.
