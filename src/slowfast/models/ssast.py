@@ -319,64 +319,63 @@ class SSASTModel(nn.Module):
 
             self.v.patch_embed.proj = new_proj
 
-        # If fine-tuning from scratch, initialise new pos embedding
-        if (cfg.TRAIN.ENABLE and cfg.TRAIN.START_EPOCH > 0):
-            new_pos_embed = self.v.pos_embed[
-                                :, 
-                                self.cls_token_num:, 
-                                :
-                            ].detach().reshape(
-                                1, 
-                                p_num_patches, 
-                                self.original_embedding_dim
-                            ).transpose(1, 2).reshape(
-                                1, 
-                                self.original_embedding_dim, 
-                                p_f_dim, 
-                                p_t_dim
+        # If fine-tuning, initialise new pos embedding
+        new_pos_embed = self.v.pos_embed[
+                            :, 
+                            self.cls_token_num:, 
+                            :
+                        ].detach().reshape(
+                            1, 
+                            p_num_patches, 
+                            self.original_embedding_dim
+                        ).transpose(1, 2).reshape(
+                            1, 
+                            self.original_embedding_dim, 
+                            p_f_dim, 
+                            p_t_dim
+                        )
+        # Cut or interpolate the positional embedding
+        if t_dim < p_t_dim:
+            new_pos_embed = new_pos_embed[
+                :, 
+                :, 
+                :, 
+                int(p_t_dim / 2) - int(t_dim / 2): int(p_t_dim / 2) + int(t_dim / 2) + t_dim
+            ]
+        else:
+            new_pos_embed = torch.nn.functional.interpolate(
+                                new_pos_embed, 
+                                size=(8, t_dim), 
+                                mode='bilinear'
                             )
-            # Cut or interpolate the positional embedding
-            if t_dim < p_t_dim:
-                new_pos_embed = new_pos_embed[
-                    :, 
-                    :, 
-                    :, 
-                    int(p_t_dim / 2) - int(t_dim / 2): int(p_t_dim / 2) + int(t_dim / 2) + t_dim
-                ]
-            else:
-                new_pos_embed = torch.nn.functional.interpolate(
-                                    new_pos_embed, 
-                                    size=(8, t_dim), 
-                                    mode='bilinear'
-                                )
-            if f_dim < p_f_dim:
-                new_pos_embed = new_pos_embed[
-                    :, 
-                    :, 
-                    int(p_f_dim / 2) - int(f_dim / 2): int(p_f_dim / 2) - int(f_dim / 2) + t_dim, 
-                    :
-                ]
-            else:
-                new_pos_embed = torch.nn.functional.interpolate(
-                                    new_pos_embed, 
-                                    size=(f_dim, t_dim), 
-                                    mode='bilinear'
-                                )
+        if f_dim < p_f_dim:
+            new_pos_embed = new_pos_embed[
+                :, 
+                :, 
+                int(p_f_dim / 2) - int(f_dim / 2): int(p_f_dim / 2) - int(f_dim / 2) + t_dim, 
+                :
+            ]
+        else:
+            new_pos_embed = torch.nn.functional.interpolate(
+                                new_pos_embed, 
+                                size=(f_dim, t_dim), 
+                                mode='bilinear'
+                            )
 
-            new_pos_embed = new_pos_embed.reshape(
-                                            1, 
-                                            self.original_embedding_dim, 
-                                            num_patches
-                                        ).transpose(1, 2)
-            self.v.pos_embed = nn.Parameter(
-                torch.cat(
-                    [
-                        self.v.pos_embed[:, :self.cls_token_num, :].detach(), 
-                        new_pos_embed
-                    ], 
-                    dim=1
-                )
+        new_pos_embed = new_pos_embed.reshape(
+                                        1, 
+                                        self.original_embedding_dim, 
+                                        num_patches
+                                    ).transpose(1, 2)
+        self.v.pos_embed = nn.Parameter(
+            torch.cat(
+                [
+                    self.v.pos_embed[:, :self.cls_token_num, :].detach(), 
+                    new_pos_embed
+                ], 
+                dim=1
             )
+        )
 
 
     # get the shape of intermediate representation.

@@ -511,7 +511,5 @@ def load_train_checkpoint(cfg, model, optimizer):
         start_epoch = checkpoint_epoch + 1
     else:
         start_epoch = 0
-    
-    cfg.TRAIN.START_EPOCH = start_epoch
 
     return start_epoch
