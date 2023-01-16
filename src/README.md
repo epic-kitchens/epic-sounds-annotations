@@ -109,7 +109,7 @@ If you are using [Slurm](https://slurm.schedmd.com/documentation.html) We have p
 - `PATH_TO_EPIC_SOUNDS_CONDA_ENV`: Path to the epic_sounds conda environment you installed in the previous step.
 - `PATH_TO_SPEC_AUGMENT`: Path to where you installed [SpecAugment](https://github.com/zcaceres/spec_augment)
 - `PATH_TO_SLOWFAST_DIR`: Path this repositorys `slowfast` directory
-- `OUTPUT_DIR: Where you wish to save the output from the scripts
+- `OUTPUT_DIR`: Where you wish to save the output from the scripts
 - `ANNOTATIONS_DIR`: Path to the EPIC-SOUNDS annotation `.pkl` files in the parent directory of this `src` folder
 - `PATH_TO_HDF5_FILE`: Path to the `EPIC_audio.hdf5` file.
 - `PATH_TO_PRETRAINED_MODEL`: Path to pretrained model, if using.
