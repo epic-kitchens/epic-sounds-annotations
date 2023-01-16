@@ -59,7 +59,7 @@ EPICSOUNDS.ANNOTATIONS_DIR /path/to/annotations \
 TRAIN.CHECKPOINT_FILE_PATH /path/to/SSAST_EPIC_SOUNDS.pyth
 ```
 
-To train either model from scratch, remove the argument `TRAIN.CHECKPOINT_FILE_PATH`. To train a linear probe model, add the argument `MODEL.FREEZE_BACKBONE True`
+To train either model from scratch, remove the argument `TRAIN.CHECKPOINT_FILE_PATH`. To train a linear probe model, add the argument `MODEL.FREEZE_BACKBONE True`.
 
 Similarly, to validate Slow-Fast on EPIC-Sounds, run:
 
