@@ -29,7 +29,7 @@ Requirements:
 The dataset in this codebase uses the [HDF5 version](https://epic-kitchens.github.io/epic-sounds/) of EPIC-SOUNDS. To install, complete the steps as follow:
 
 - From the [annotation repository of EPIC-SOUNDS](https://github.com/epic-kitchens/epic-sounds-annotations) e.g. the parent directory of this `src` folder, download: `EPIC_Sounds_train.pkl`, `EPIC_Sounds_validation.pkl` and `EPIC_Sounds_recognition_test.pkl`. `EPIC_Sounds_train.pkl`, `EPIC_Sounds_validation.pkl` may be used for training and validation, whilst `EPIC_Sounds_recognition_test.pkl` can be used to generate an output that can be converted into a submission to the [Audio-Bassed Interaction Recognition Challenge](https://github.com/epic-kitchens/C9-epic-sounds).
-- Download the HDF5 file [here](https://epic-kitchens.github.io/epic-sounds/)
+- Download the HDF5 file [here](https://epic-kitchens.github.io/epic-sounds/).
 
 **NOTE** For this directory, you should install and pass arugments for the `.pkl` annotation files only, rather than the `.csv` files.
 
