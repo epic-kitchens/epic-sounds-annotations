@@ -15,7 +15,7 @@ Requirements:
 
 - [PyTorch](https://pytorch.org/)
     - CUDA 11.6: `conda install pytorch torchvision torchaudio pytorch-cuda=11.6 -c pytorch -c nvidia`
-- [libroa](https://librosa.org/) `conda install -c conda-forge librosa`
+- [librosa](https://librosa.org/) `conda install -c conda-forge librosa`
 - [wandb](https://wandb.ai/site) `conda install -c conda-forge wandb`
 - [h5py](https://www.h5py.org/) `conda install -c anaconda h5py`
 - [fvcore](https://github.com/facebookresearch/fvcore/) `conda install -c conda-forge fvcore`
