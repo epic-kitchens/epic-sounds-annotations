@@ -23,6 +23,8 @@ Requirements:
 - [psutil](https://psutil.readthedocs.io/en/latest/) `conda install -c conda-forge psutil`
 - [SpecAugment with Pytorch](https://github.com/zcaceres/spec_augment)
 
+You will also need to export the `slowfast` directory, as well as SpecAugment with PyTorch, to your Python path with `export PYTHONPATH=<path-to-spec-augment>:<path-to-epic-sounds-annotations-directory>/slowfast:$PYTHONPATH`
+
 ### Downloading EPIC-SOUNDS
 
 The dataset in this codebase uses the [HDF5 version](https://epic-kitchens.github.io/epic-sounds/) of EPIC-SOUNDS. To install, complete the steps as follow:
