@@ -23,7 +23,9 @@ Requirements:
 - [psutil](https://psutil.readthedocs.io/en/latest/) `conda install -c conda-forge psutil`
 - [SpecAugment with Pytorch](https://github.com/zcaceres/spec_augment)
 
-You will also need to export the `slowfast` directory, as well as SpecAugment with PyTorch, to your Python path with `export PYTHONPATH=<path-to-spec-augment>:<path-to-epic-sounds-annotations-directory>/slowfast:$PYTHONPATH`
+You will also need to export the `slowfast` directory, as well as SpecAugment with PyTorch, to your Python path with: 
+
+`export PYTHONPATH=<path-to-spec-augment>:<path-to-epic-sounds-annotations-directory>/slowfast:$PYTHONPATH`
 
 ### Downloading EPIC-SOUNDS
 
