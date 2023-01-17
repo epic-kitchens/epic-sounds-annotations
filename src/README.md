@@ -21,7 +21,7 @@ Requirements:
 - [fvcore](https://github.com/facebookresearch/fvcore/) `conda install -c conda-forge fvcore`
 - [simplejson](https://simplejson.readthedocs.io/en/latest/) `conda install -c conda-forge simplejson`
 - [psutil](https://psutil.readthedocs.io/en/latest/) `conda install -c conda-forge psutil`
-- [SpecAugment with Pytorch](https://github.com/zcaceres/spec_augment) `git clone https://github.com/pytorch/audio.git torchaudio; cd torchaudio; python setup.py install`
+- [SpecAugment with Pytorch](https://github.com/zcaceres/spec_augment) `conda install -c fastai fastai; git clone https://github.com/pytorch/audio.git torchaudio; cd torchaudio; python setup.py install`
 
 ### Downloading EPIC-SOUNDS
 
