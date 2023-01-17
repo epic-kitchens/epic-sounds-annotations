@@ -23,6 +23,7 @@ Requirements:
 - [simplejson](https://simplejson.readthedocs.io/en/latest/) `conda install -c conda-forge simplejson`
 - [psutil](https://psutil.readthedocs.io/en/latest/) `conda install -c conda-forge psutil`
 - [pandas](https://pandas.pydata.org/pandas-docs/stable/index.html) `conda install pandas`
+- [timm](https://huggingface.co/docs/timm/index) `conda install -c conda-forge timm`
 - [SpecAugment with Pytorch](https://github.com/zcaceres/spec_augment)
 
 You will also need to export the `slowfast` directory and SpecAugment with PyTorch to your Python path with: 
