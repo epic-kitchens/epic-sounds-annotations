@@ -25,7 +25,9 @@ Requirements:
 
 You will also need to export the `slowfast` directory, as well as SpecAugment with PyTorch, to your Python path with: 
 
-`export PYTHONPATH=<path-to-spec-augment>:<path-to-epic-sounds-annotations-directory>/slowfast:$PYTHONPATH`
+```(python)
+export PYTHONPATH=<path-to-spec-augment>:<path-to-epic-sounds-annotations-directory>/slowfast:$PYTHONPATH
+```
 
 ### Downloading EPIC-SOUNDS
 
