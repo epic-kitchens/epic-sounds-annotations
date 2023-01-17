@@ -22,6 +22,7 @@ Requirements:
     - [iopath](https://github.com/facebookresearch/iopath) `conda install -c conda-forge iopath`
 - [simplejson](https://simplejson.readthedocs.io/en/latest/) `conda install -c conda-forge simplejson`
 - [psutil](https://psutil.readthedocs.io/en/latest/) `conda install -c conda-forge psutil`
+- [pandas](https://pandas.pydata.org/pandas-docs/stable/index.html) `conda install pandas`
 - [SpecAugment with Pytorch](https://github.com/zcaceres/spec_augment)
 
 You will also need to export the `slowfast` directory and SpecAugment with PyTorch to your Python path with: 
