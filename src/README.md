@@ -17,13 +17,13 @@ Requirements:
     - CUDA 11.6: `conda install pytorch torchvision torchaudio pytorch-cuda=11.6 -c pytorch -c nvidia`
 - [librosa](https://librosa.org/) `conda install -c conda-forge librosa`
 - [wandb](https://wandb.ai/site) `conda install -c conda-forge wandb`
+    - [tensorboard](https://www.tensorflow.org/tensorboard) `conda install -c conda-forge tensorboard`
 - [h5py](https://www.h5py.org/) `conda install -c anaconda h5py`
 - [fvcore](https://github.com/facebookresearch/fvcore/) `conda install -c fvcore -c iopath -c conda-forge fvcore`
 - [simplejson](https://simplejson.readthedocs.io/en/latest/) `conda install -c conda-forge simplejson`
 - [psutil](https://psutil.readthedocs.io/en/latest/) `conda install -c conda-forge psutil`
 - [pandas](https://pandas.pydata.org/pandas-docs/stable/index.html) `conda install pandas`
 - [timm](https://huggingface.co/docs/timm/index) `conda install -c conda-forge timm`
-- [tensorboard](https://www.tensorflow.org/tensorboard) `conda install -c conda-forge tensorboard`
 - [SpecAugment with Pytorch](https://github.com/zcaceres/spec_augment)
 
 You will also need to export the `slowfast` directory and SpecAugment with PyTorch to your Python path with: 
