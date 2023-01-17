@@ -19,7 +19,6 @@ Requirements:
 - [wandb](https://wandb.ai/site) `conda install -c conda-forge wandb`
 - [h5py](https://www.h5py.org/) `conda install -c anaconda h5py`
 - [fvcore](https://github.com/facebookresearch/fvcore/) `conda install -c conda-forge fvcore`
-    - [iopath](https://github.com/facebookresearch/iopath) `conda install -c conda-forge iopath`
 - [simplejson](https://simplejson.readthedocs.io/en/latest/) `conda install -c conda-forge simplejson`
 - [psutil](https://psutil.readthedocs.io/en/latest/) `conda install -c conda-forge psutil`
 - [pandas](https://pandas.pydata.org/pandas-docs/stable/index.html) `conda install pandas`
