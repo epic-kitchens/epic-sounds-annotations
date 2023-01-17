@@ -13,7 +13,7 @@ You can download our pretrained models on EPIC-SOUNDS:
 
 Requirements:
 
-- [PyTorch 1.13.1](https://pytorch.org/)
+- [PyTorch](https://pytorch.org/)
     - CUDA 11.6: `conda install pytorch torchvision torchaudio pytorch-cuda=11.6 -c pytorch -c nvidia`
 - [libroa](https://librosa.org/) `conda install -c conda-forge librosa`
 - [wandb](https://wandb.ai/site) `conda install -c conda-forge wandb`
