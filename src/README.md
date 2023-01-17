@@ -6,7 +6,7 @@ The code in this repo is a condensed clone from [https://github.com/facebookrese
 
 You can download our pretrained models on EPIC-SOUNDS:
 
-- [Slow-Fast](https://github.com/ekazakos/auditory-slow-fast)
+- [Slow-Fast](https://www.dropbox.com/s/339zsc6kz6c3wz9/SLOWFAST_EPIC_SOUNDS.pyth?dl=0)
 - [SSAST](https://github.com/YuanGongND/ssast)
 
 ## Setup
