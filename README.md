@@ -7,7 +7,7 @@ We introduce [EPIC-SOUNDS](https://epic-kitchens.github.io/epic-sounds/), a larg
 ## Citing
 When using the dataset, kindly reference:
 ```
-@article{epic-sounds2023,
+@article{epicsounds2023,
    title={E{PIC}-{SOUNDS}: A LARGE-SCALE DATASET OF ACTIONS THAT SOUND},
    author={Huh, Jaesung and Chalk, Jacob and Kazakos, Evangelos and Damen, Dima and Zisserman, Andrew},
    journal={ArXiv},
