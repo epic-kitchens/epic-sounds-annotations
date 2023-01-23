@@ -43,7 +43,7 @@ This CSV file contains the annotations for the training set and contains 8 colum
 | `video_id`            | string                     | `P01_01`       | ID of the video where the segment originated from (unique per video).         |
 | `start_timestamp`     | string                     | `00:00:00.14`  | Start time in `HH:mm:ss.SSS` of the audio annotation.                         |
 | `stop_timestamp`      | string                     | `00:00:03.37`  | End time in `HH:mm:ss.SSS` of the audio annotation.                           |
-| `description`         | string                     | `paper rustle` | Transcribed English description of provided by the annotator.                 |
+| `description`         | string                     | `paper rustle` | Transcribed English description provided by the annotator.                 |
 | `class`               | string                     | `rustle`       | Parsed class from the description.                                            |
 | `class_id`            | int                        | `3`            | Numeric ID of the class.                                                      |
 
@@ -58,7 +58,7 @@ This CSV file contains the annotations for the validation set and contains 8 col
 | `video_id`            | string                     | `P01_01`       | ID of the video where the segment originated from (unique per video).         |
 | `start_timestamp`     | string                     | `00:00:00.14`  | Start time in `HH:mm:ss.SSS` of the audio annotation.                         |
 | `stop_timestamp`      | string                     | `00:00:03.37`  | End time in `HH:mm:ss.SSS` of the audio annotation.                           |
-| `description`         | string                     | `paper rustle` | Transcribed English description of provided by the annotator.                 |
+| `description`         | string                     | `paper rustle` | Transcribed English description provided by the annotator.                 |
 | `class`               | string                     | `rustle`       | Parsed class from the description.                                            |
 | `class_id`            | int                        | `3`            | Numeric ID of the class.                                                      |
 
