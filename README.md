@@ -36,7 +36,7 @@ Also cite the EPIC-KITCHENS-100 paper where the videos originate:
 
 #### EPIC_Sounds_train.csv
 
-This CSV file contains the annotations for the training set and contains 8 columns:
+This CSV file contains the annotations for the training set and contains 10 columns:
 
 | Column Name           | Type                       | Example        | Description                                                                   |
 | --------------------- | -------------------------- | -------------- | ----------------------------------------------------------------------------- |
@@ -53,7 +53,7 @@ This CSV file contains the annotations for the training set and contains 8 colum
 
 #### EPIC_Sounds_validation.csv
 
-This CSV file contains the annotations for the validation set and contains 8 columns:
+This CSV file contains the annotations for the validation set and contains 10 columns:
 
 | Column Name           | Type                       | Example        | Description                                                                   |
 | --------------------- | -------------------------- | -------------- | ----------------------------------------------------------------------------- |
@@ -70,7 +70,7 @@ This CSV file contains the annotations for the validation set and contains 8 col
 
 #### EPIC_Sounds_recognition_test_timestamps.csv
 
-This CSV file contains the annotations for the recognition testing set and contains 5 columns:
+This CSV file contains the annotations for the recognition testing set and contains 7 columns:
 
 | Column Name           | Type                       | Example        | Description                                                                   |
 | --------------------- | -------------------------- | -------------- | ----------------------------------------------------------------------------- |
@@ -84,7 +84,7 @@ This CSV file contains the annotations for the recognition testing set and conta
 
 #### sound_events_not_categorised.csv
 
-This CSV file contains the annotations that could not be clustered into our 44 classes and contains 6 columns:
+This CSV file contains the annotations that could not be clustered into our 44 classes and contains 8 columns:
 
 | Column Name           | Type                       | Example        | Description                                                                   |
 | --------------------- | -------------------------- | -------------- | ----------------------------------------------------------------------------- |
