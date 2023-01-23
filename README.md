@@ -41,7 +41,7 @@ This CSV file contains the annotations for the training set and contains 8 colum
 | Column Name           | Type                       | Example        | Description                                                                   |
 | --------------------- | -------------------------- | -------------- | ----------------------------------------------------------------------------- |
 | `annotation_id`       | string                     | `P01_01_0`     | Unique ID for the annotation as a string with participant ID and video ID.    |
-| `participant_id`      | int                        | `P01`          | ID of the participant (unique per participant).                               |
+| `participant_id`      | string                     | `P01`          | ID of the participant (unique per participant).                               |
 | `video_id`            | string                     | `P01_01`       | ID of the video where the segment originated from (unique per video).         |
 | `start_timestamp`     | string                     | `00:00:02.466` | Start time in `HH:mm:ss.SSS` of the audio annotation.                         |
 | `stop_timestamp`      | string                     | `00:00:05.315` | End time in `HH:mm:ss.SSS` of the audio annotation.                           |
@@ -56,7 +56,7 @@ This CSV file contains the annotations for the validation set and contains 8 col
 | Column Name           | Type                       | Example        | Description                                                                   |
 | --------------------- | -------------------------- | -------------- | ----------------------------------------------------------------------------- |
 | `annotation_id`       | string                     | `P01_01_0`     | Unique ID for the annotation as a string with participant ID and video ID.    |
-| `participant_id`      | int                        | `P01`          | ID of the participant (unique per participant).                               |
+| `participant_id`      | string                     | `P01`          | ID of the participant (unique per participant).                               |
 | `video_id`            | string                     | `P01_01`       | ID of the video where the segment originated from (unique per video).         |
 | `start_timestamp`     | string                     | `00:00:02.466` | Start time in `HH:mm:ss.SSS` of the audio annotation.                         |
 | `stop_timestamp`      | string                     | `00:00:05.315` | End time in `HH:mm:ss.SSS` of the audio annotation.                           |
@@ -71,7 +71,7 @@ This CSV file contains the annotations for the testing set and contains 5 column
 | Column Name           | Type                       | Example        | Description                                                                   |
 | --------------------- | -------------------------- | -------------- | ----------------------------------------------------------------------------- |
 | `annotation_id`       | string                     | `P01_01_0`     | Unique ID for the annotation as a string with participant ID and video ID.    |
-| `participant_id`      | int                        | `P01`          | ID of the participant (unique per participant).                               |
+| `participant_id`      | string                     | `P01`          | ID of the participant (unique per participant).                               |
 | `video_id`            | string                     | `P01_01`       | ID of the video where the segment originated from (unique per video).         |
 | `start_timestamp`     | string                     | `00:00:02.466` | Start time in `HH:mm:ss.SSS` of the audio annotation.                         |
 | `stop_timestamp`      | string                     | `00:00:05.315` | End time in `HH:mm:ss.SSS` of the audio annotation.                           |
@@ -83,7 +83,7 @@ This CSV file contains the annotations that could not be clustered into our 44 c
 | Column Name           | Type                       | Example        | Description                                                                   |
 | --------------------- | -------------------------- | -------------- | ----------------------------------------------------------------------------- |
 | `annotation_id`       | string                     | `P01_01_NC_0`  | Unique ID for the annotation as a string with participant ID and video ID.    |
-| `participant_id`      | int                        | `P01`          | ID of the participant (unique per participant).                               |
+| `participant_id`      | string                     | `P01`          | ID of the participant (unique per participant).                               |
 | `video_id`            | string                     | `P01_01`       | ID of the video where the segment originated from (unique per video).         |
 | `start_timestamp`     | string                     | `00:00:02.466` | Start time in `HH:mm:ss.SSS` of the audio annotation.                         |
 | `stop_timestamp`      | string                     | `00:00:05.315` | End time in `HH:mm:ss.SSS` of the audio annotation.                           |
