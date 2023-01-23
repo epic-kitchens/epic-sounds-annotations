@@ -6,7 +6,7 @@
 #SBATCH --time=24:00:00
 
 # Set name of job
-#SBATCH --job-name=AST_FT
+#SBATCH --job-name=SSAST_FT
 
 # Set number of GPUs
 #SBATCH --gres=gpu:8
