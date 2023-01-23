@@ -82,7 +82,7 @@ This CSV file contains the annotations that could not be clustered into our 44 c
 
 | Column Name           | Type                       | Example        | Description                                                                   |
 | --------------------- | -------------------------- | -------------- | ----------------------------------------------------------------------------- |
-| `annotation_id`       | string                     | `P01_01_0`     | Unique ID for the annotation as a string with participant ID and video ID.    |
+| `annotation_id`       | string                     | `P01_01_NC_0`  | Unique ID for the annotation as a string with participant ID and video ID.    |
 | `participant_id`      | int                        | `P01`          | ID of the participant (unique per participant).                               |
 | `video_id`            | string                     | `P01_01`       | ID of the video where the segment originated from (unique per video).         |
 | `start_timestamp`     | string                     | `00:00:02.466` | Start time in `HH:mm:ss.SSS` of the audio annotation.                         |
