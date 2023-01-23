@@ -2,6 +2,8 @@
 
 We introduce [EPIC-SOUNDS](https://epic-kitchens.github.io/epic-sounds/), a large scale dataset of audio annotations capturing temporal extents and class labels within the audio stream of the egocentric videos from EPIC-KITCHENS-100. EPIC-SOUNDS includes 79.2k segments of audible events and actions, distributed across 44 classes. In this repository, we provide labelled temporal timestamps for the train / val split, and just the timestamps for the recognition test split. We train and evaluate two state-of-the-art audio recognition models on our dataset, which we also provide the code and pretrained models.
 
+A download script is provided for the videos [here](https://github.com/epic-kitchens/download-scripts-100). You will have to extract the untrimmed audios from these videos. Instructions on how to extract and format the audio into a HDF5 dataset can be found on the [Auditory SlowFast](https://github.com/ekazakos/auditory-slow-fast) GitHub repo. Alternatively, you can eamil [uob-epic-kitchens@bristol.ac.uk](mailto:uob-epic-kitchens@bristol.ac.uk) for access to an existing HDF5 file.
+
 **Contact:** [uob-epic-kitchens@bristol.ac.uk](mailto:uob-epic-kitchens@bristol.ac.uk)
 
 ## Citing
