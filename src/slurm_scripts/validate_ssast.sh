@@ -29,7 +29,7 @@ PATH_TO_SPEC_AUGMENT = ""
 PATH_TO_SLOWFAST_DIR = ""
 
 # Train args
-OUTPUT_DIR = "SlowFast/EPIC-Sounds/baseline"
+OUTPUT_DIR = "SSAST/EPIC-Sounds/baseline"
 ANNOTATIONS_DIR = ""
 PATH_TO_HDF5_FILE = ""
 PATH_TO_PRETRAINED_MODEL = ""
