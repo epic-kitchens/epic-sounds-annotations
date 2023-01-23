@@ -12,10 +12,10 @@ AUDIO_DATA:
   NUM_FRAMES: 400
   INPUT_CHANNEL_NUM: [1]
 SOLVER:
-  BASE_LR: 1e-5
+  BASE_LR: 1e-4
   LR_POLICY: steps_with_relative_lrs
-  STEPS: [0, 25]
-  LRS: [1, 0.1]
+  STEPS: [0, 10, 25]
+  LRS: [1, 0.1, 0.01]
   MAX_EPOCH: 30
   WEIGHT_DECAY: 1e-4
   WARMUP_EPOCHS: -1.0

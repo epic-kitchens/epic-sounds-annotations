@@ -13,22 +13,24 @@ You can download our pretrained models on EPIC-SOUNDS:
 
 Requirements:
 
+If using conda, you can install the requirements with the following commands in you own conda environment, or with the provided yaml file with: `conda env create -f environment.yml`. Rember to activate this environment with `conda activate epic-sounds`, or a similar name.
+
 - [Python 3.6 <= 3.9](https://www.python.org/) `conda install python=3.9`
 - [PyTorch](https://pytorch.org/)
-    - CUDA 11.6: `conda install pytorch torchvision torchaudio pytorch-cuda=11.6 -c pytorch -c nvidia`
+  - CUDA 11.6: `conda install pytorch torchvision torchaudio pytorch-cuda=11.6 -c pytorch -c nvidia`
 - [librosa](https://librosa.org/) `conda install -c conda-forge librosa`
 - [wandb](https://wandb.ai/site) `conda install -c conda-forge wandb`
-    - [tensorboard](https://www.tensorflow.org/tensorboard) `conda install -c conda-forge tensorboard`
+  - [tensorboard](https://www.tensorflow.org/tensorboard) `conda install -c conda-forge tensorboard`
 - [h5py](https://www.h5py.org/) `conda install -c anaconda h5py`
 - [fvcore](https://github.com/facebookresearch/fvcore/) `conda install -c fvcore -c iopath -c conda-forge fvcore`
-    - [iopath](https://github.com/facebookresearch/iopath) `conda install -c iopath iopath`
+  - [iopath](https://github.com/facebookresearch/iopath) `conda install -c iopath iopath`
 - [simplejson](https://simplejson.readthedocs.io/en/latest/) `conda install -c conda-forge simplejson`
 - [psutil](https://psutil.readthedocs.io/en/latest/) `conda install -c conda-forge psutil`
 - [pandas](https://pandas.pydata.org/pandas-docs/stable/index.html) `conda install pandas`
 - [timm](https://huggingface.co/docs/timm/index) `conda install -c conda-forge timm`
 - [SpecAugment with Pytorch](https://github.com/zcaceres/spec_augment)
 
-You will also need to export the `slowfast` directory and SpecAugment with PyTorch to your Python path with: 
+You will also need to export the `slowfast` directory and "SpecAugment with PyTorch" to your Python path with:
 
 ```(python)
 export PYTHONPATH=<path-to-spec-augment>:<path-to-epic-sounds-annotations-directory>/slowfast:$PYTHONPATH

@@ -96,45 +96,6 @@ class FuseFastToSlow(nn.Module):
         return [x_s_fuse, x_f]
 
 
-class MMTM(nn.Module):
-    """
-    Fuses the information from the Fast pathway to the Slow pathway. Given the
-    tensors from Slow pathway and Fast pathway, fuse information from Fast to
-    Slow, then return the fused tensors from Slow and Fast pathway in order.
-    """
-
-    def __init__(
-        self,
-        dim_in,
-    ):
-        """
-        Args:
-            dim_in (list): the channel dimension of the inputs.
-        """
-        super(MMTM, self).__init__()
-        self.squeeze_s = torch.nn.AdaptiveAvgPool2d(1)
-        self.squeeze_f = torch.nn.AdaptiveAvgPool2d(1)
-        dim_z = (dim_in[0] + dim_in[1]) // 4
-        self.z = torch.nn.Linear(dim_in[0] + dim_in[1], dim_z)
-        self.relu_z = nn.ReLU()
-        self.excitation_s = torch.nn.Linear(dim_z, dim_in[0])
-        self.excitation_f = torch.nn.Linear(dim_z, dim_in[1])
-        self.sigmoid_s = nn.Sigmoid()
-        self.sigmoid_f = nn.Sigmoid()
-
-    def forward(self, x):
-        x_s = x[0]
-        x_f = x[1]
-        s_s = self.squeeze_s(x_s)
-        s_f = self.squeeze_s(x_f)
-        z = self.relu_z(self.z(torch.cat([s_s, s_f], dim=0)))
-        e_s = self.excitation_s(z)
-        e_f = self.excitation_f(z)
-        x_s_new = 2 * self.sigmoid_s(e_s) * x_s
-        x_f_new = 2 * self.sigmoid_f(e_f) * x_f
-        return [x_s_new, x_f_new]
-
-
 @MODEL_REGISTRY.register()
 class SlowFastAudio(nn.Module):
     """
