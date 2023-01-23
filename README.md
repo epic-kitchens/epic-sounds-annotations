@@ -30,6 +30,50 @@ Also cite the EPIC-KITCHENS-100 paper where the videos originate:
 } 
 ```
 
+## File Structure
+
+#### EPIC_Sounds_train.csv
+
+This CSV file contains the annotations for the training set and contains 8 columns:
+
+| Column Name           | Type                       | Example        | Description                                                                   |
+| --------------------- | -------------------------- | -------------- | ----------------------------------------------------------------------------- |
+| `annotation_id`       | string                     | `P01_01_0`     | Unique ID for the annotation as a string with participant ID and video ID.    |
+| `participant_id`      | int                        | `P01`          | ID of the participant (unique per participant).                               |
+| `video_id`            | string                     | `P01_01`       | ID of the video where the segment originated from (unique per video).         |
+| `start_timestamp`     | string                     | `00:00:00.14`  | Start time in `HH:mm:ss.SSS` of the audio annotation.                         |
+| `stop_timestamp`      | string                     | `00:00:03.37`  | End time in `HH:mm:ss.SSS` of the audio annotation.                           |
+| `description`         | string                     | `paper rustle` | Transcribed English description of provided by the annotator.                 |
+| `class`               | string                     | `rustle`       | Parsed class from the description.                                            |
+| `class_id`            | int                        | `3`            | Numeric ID of the class.                                                      |
+
+#### EPIC_Sounds_validation.csv
+
+This CSV file contains the annotations for the validation set and contains 8 columns:
+
+| Column Name           | Type                       | Example        | Description                                                                   |
+| --------------------- | -------------------------- | -------------- | ----------------------------------------------------------------------------- |
+| `annotation_id`       | string                     | `P01_01_0`     | Unique ID for the annotation as a string with participant ID and video ID.    |
+| `participant_id`      | int                        | `P01`          | ID of the participant (unique per participant).                               |
+| `video_id`            | string                     | `P01_01`       | ID of the video where the segment originated from (unique per video).         |
+| `start_timestamp`     | string                     | `00:00:00.14`  | Start time in `HH:mm:ss.SSS` of the audio annotation.                         |
+| `stop_timestamp`      | string                     | `00:00:03.37`  | End time in `HH:mm:ss.SSS` of the audio annotation.                           |
+| `description`         | string                     | `paper rustle` | Transcribed English description of provided by the annotator.                 |
+| `class`               | string                     | `rustle`       | Parsed class from the description.                                            |
+| `class_id`            | int                        | `3`            | Numeric ID of the class.                                                      |
+
+#### EPIC_Sounds_recognition_test_timestamps.csv
+
+This CSV file contains the annotations for the testing set and contains 5 columns:
+
+| Column Name           | Type                       | Example        | Description                                                                   |
+| --------------------- | -------------------------- | -------------- | ----------------------------------------------------------------------------- |
+| `annotation_id`       | string                     | `P01_01_0`     | Unique ID for the annotation as a string with participant ID and video ID.    |
+| `participant_id`      | int                        | `P01`          | ID of the participant (unique per participant).                               |
+| `video_id`            | string                     | `P01_01`       | ID of the video where the segment originated from (unique per video).         |
+| `start_timestamp`     | string                     | `00:00:00.14`  | Start time in `HH:mm:ss.SSS` of the audio annotation.                         |
+| `stop_timestamp`      | string                     | `00:00:03.37`  | End time in `HH:mm:ss.SSS` of the audio annotation.                           |
+
 ## License
 All files in this dataset are copyright by us and published under the 
 Creative Commons Attribution-NonCommerial 4.0 International License, found 
