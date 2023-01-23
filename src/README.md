@@ -13,9 +13,9 @@ You can download our pretrained models on EPIC-SOUNDS:
 
 Requirements:
 
-If using conda, you can install the requirements with the following commands in you own conda environment, or with the provided yaml file with: `conda env create -f environment.yml`. Rember to activate this environment with `conda activate epic-sounds`, or a similar name.
+If using conda, you can install the requirements with the following commands in you own conda environment. Rember to activate this environment with `conda activate epic-sounds`, or a similar name.
 
-- [Python 3.6 <= 3.9](https://www.python.org/) `conda install python=3.9`
+- [Python 3.9](https://www.python.org/) `conda install python=3.9`
 - [PyTorch](https://pytorch.org/)
   - CUDA 11.6: `conda install pytorch torchvision torchaudio pytorch-cuda=11.6 -c pytorch -c nvidia`
 - [librosa](https://librosa.org/) `conda install -c conda-forge librosa`
