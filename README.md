@@ -74,6 +74,19 @@ This CSV file contains the annotations for the testing set and contains 5 column
 | `start_timestamp`     | string                     | `00:00:02.466` | Start time in `HH:mm:ss.SSS` of the audio annotation.                         |
 | `stop_timestamp`      | string                     | `00:00:05.315` | End time in `HH:mm:ss.SSS` of the audio annotation.                           |
 
+#### sound_events_not_categorised.csv
+
+This CSV file contains the annotations that could not be clustered into our 44 classes and contains 6 columns:
+
+| Column Name           | Type                       | Example        | Description                                                                   |
+| --------------------- | -------------------------- | -------------- | ----------------------------------------------------------------------------- |
+| `annotation_id`       | string                     | `P01_01_0`     | Unique ID for the annotation as a string with participant ID and video ID.    |
+| `participant_id`      | int                        | `P01`          | ID of the participant (unique per participant).                               |
+| `video_id`            | string                     | `P01_01`       | ID of the video where the segment originated from (unique per video).         |
+| `start_timestamp`     | string                     | `00:00:02.466` | Start time in `HH:mm:ss.SSS` of the audio annotation.                         |
+| `stop_timestamp`      | string                     | `00:00:05.315` | End time in `HH:mm:ss.SSS` of the audio annotation.                           |
+| `description`         | string                     | `paper rustle` | Transcribed English description provided by the annotator.                    |  
+
 ## License
 All files in this dataset are copyright by us and published under the 
 Creative Commons Attribution-NonCommerial 4.0 International License, found 
