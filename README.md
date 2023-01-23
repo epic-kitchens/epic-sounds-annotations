@@ -45,6 +45,8 @@ This CSV file contains the annotations for the training set and contains 8 colum
 | `video_id`            | string                     | `P01_01`       | ID of the video where the segment originated from (unique per video).         |
 | `start_timestamp`     | string                     | `00:00:02.466` | Start time in `HH:mm:ss.SSS` of the audio annotation.                         |
 | `stop_timestamp`      | string                     | `00:00:05.315` | End time in `HH:mm:ss.SSS` of the audio annotation.                           |
+| `start_sample`        | int                        | `59184`        | Index of the start time audio sample in the untrimmed audio of `video_id`     |
+| `stop_sample`         | int                        | `127560`       | Index of the stop time audio sample in the untrimmed audio of `video_id`      |
 | `description`         | string                     | `paper rustle` | Transcribed English description provided by the annotator.                    |
 | `class`               | string                     | `rustle`       | Parsed class from the description.                                            |
 | `class_id`            | int                        | `3`            | Numeric ID of the class.                                                      |
@@ -60,13 +62,15 @@ This CSV file contains the annotations for the validation set and contains 8 col
 | `video_id`            | string                     | `P01_01`       | ID of the video where the segment originated from (unique per video).         |
 | `start_timestamp`     | string                     | `00:00:02.466` | Start time in `HH:mm:ss.SSS` of the audio annotation.                         |
 | `stop_timestamp`      | string                     | `00:00:05.315` | End time in `HH:mm:ss.SSS` of the audio annotation.                           |
+| `start_sample`        | int                        | `59184`        | Index of the start time audio sample in the untrimmed audio of `video_id`     |
+| `stop_sample`         | int                        | `127560`       | Index of the stop time audio sample in the untrimmed audio of `video_id`      |
 | `description`         | string                     | `paper rustle` | Transcribed English description provided by the annotator.                    |  
 | `class`               | string                     | `rustle`       | Parsed class from the description.                                            |
 | `class_id`            | int                        | `3`            | Numeric ID of the class.                                                      |
 
 #### EPIC_Sounds_recognition_test_timestamps.csv
 
-This CSV file contains the annotations for the testing set and contains 5 columns:
+This CSV file contains the annotations for the recognition testing set and contains 5 columns:
 
 | Column Name           | Type                       | Example        | Description                                                                   |
 | --------------------- | -------------------------- | -------------- | ----------------------------------------------------------------------------- |
@@ -75,6 +79,8 @@ This CSV file contains the annotations for the testing set and contains 5 column
 | `video_id`            | string                     | `P01_01`       | ID of the video where the segment originated from (unique per video).         |
 | `start_timestamp`     | string                     | `00:00:02.466` | Start time in `HH:mm:ss.SSS` of the audio annotation.                         |
 | `stop_timestamp`      | string                     | `00:00:05.315` | End time in `HH:mm:ss.SSS` of the audio annotation.                           |
+| `start_sample`        | int                        | `59184`        | Index of the start time audio sample in the untrimmed audio of `video_id`     |
+| `stop_sample`         | int                        | `127560`       | Index of the stop time audio sample in the untrimmed audio of `video_id`      |
 
 #### sound_events_not_categorised.csv
 
@@ -87,6 +93,8 @@ This CSV file contains the annotations that could not be clustered into our 44 c
 | `video_id`            | string                     | `P01_01`       | ID of the video where the segment originated from (unique per video).         |
 | `start_timestamp`     | string                     | `00:00:02.466` | Start time in `HH:mm:ss.SSS` of the audio annotation.                         |
 | `stop_timestamp`      | string                     | `00:00:05.315` | End time in `HH:mm:ss.SSS` of the audio annotation.                           |
+| `start_sample`        | int                        | `59184`        | Index of the start time audio sample in the untrimmed audio of `video_id`     |
+| `stop_sample`         | int                        | `127560`       | Index of the stop time audio sample in the untrimmed audio of `video_id`      |
 | `description`         | string                     | `paper rustle` | Transcribed English description provided by the annotator.                    |  
 
 ## License
