@@ -9,15 +9,11 @@
 #SBATCH --job-name=ASF_TEST
 
 # Set number of GPUs
-#SBATCH --gres=gpu:8
+#SBATCH --gres=gpu:1
 
-#SBATCH --mem=500GB
+#SBATCH --mem=64GB
 
-#SBATCH --cpus-per-task=40
-
-# Set partition
-#SBATCH --partition=big
-
+#SBATCH --cpus-per-task=8
 
 module purge
 
