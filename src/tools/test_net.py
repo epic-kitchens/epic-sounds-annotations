@@ -146,6 +146,7 @@ def test(cfg):
         cfg.TEST.NUM_ENSEMBLE_VIEWS,
         cfg.MODEL.NUM_CLASSES[0],
         len(test_loader),
+        cfg.EPICSOUNDS.TEST_LIST
     )
 
     # Perform multi-view test on the entire dataset.

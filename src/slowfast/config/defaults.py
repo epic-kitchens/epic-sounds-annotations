@@ -232,7 +232,7 @@ _C.SLOWFAST.FUSION_CONV_CHANNEL_RATIO = 2
 _C.SLOWFAST.FUSION_KERNEL_SZ = 5
 
 # -----------------------------------------------------------------------------
-# Audio Spectrogram Transformer options
+# Self-Supervised Audio Spectrogram Transformer options
 # -----------------------------------------------------------------------------
 _C.SSAST = CfgNode()
 

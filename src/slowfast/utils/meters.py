@@ -409,6 +409,7 @@ class TestMeter(object):
         num_clips,
         num_cls,
         overall_iters,
+        split
     ):
         """
         Construct tensors to store the predictions and labels. Expect to get
@@ -430,6 +431,7 @@ class TestMeter(object):
         self.iter_times = []
         self.num_clips = num_clips
         self.overall_iters = overall_iters
+        self.split = split
         # Initialize tensors.
         self.video_preds = torch.zeros((num_videos, num_cls))
         self.video_preds_clips = torch.zeros((num_videos, num_clips, num_cls))
@@ -535,24 +537,25 @@ class TestMeter(object):
 
         self.stats = {"split": "test_final"}
 
-        num_topks_correct = metrics.topks_correct(
-            self.video_preds, self.video_labels, ks
-        )
-        topks = [
-            (x / self.video_preds.size(0)) * 100.0
-            for x in num_topks_correct
-        ]
-        assert len({len(ks), len(topks)}) == 1
-        for k, topk in zip(ks, topks):
-            self.stats["top{}_acc".format(k)] = "{:.{prec}f}".format(
-                topk, prec=2
+        if not "test" in self.split:
+            num_topks_correct = metrics.topks_correct(
+                self.video_preds, self.video_labels, ks
             )
-        
-        mini_stats = metrics.get_stats(
-            self.video_preds.cpu().numpy(),
-            self.video_labels.cpu().numpy()
-        )
-        self.stats.update(mini_stats)
+            topks = [
+                (x / self.video_preds.size(0)) * 100.0
+                for x in num_topks_correct
+            ]
+            assert len({len(ks), len(topks)}) == 1
+            for k, topk in zip(ks, topks):
+                self.stats["top{}_acc".format(k)] = "{:.{prec}f}".format(
+                    topk, prec=2
+                )
+            
+            mini_stats = metrics.get_stats(
+                self.video_preds.cpu().numpy(),
+                self.video_labels.cpu().numpy()
+            )
+            self.stats.update(mini_stats)
 
         logging.log_json_stats(self.stats)
         return self.video_preds.numpy().copy(), \
