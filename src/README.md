@@ -2,6 +2,8 @@
 
 The code in this repo is a condensed clone from [https://github.com/facebookresearch/SlowFast](https://github.com/facebookresearch/SlowFast). It contains code to train, validate and compute test scores on the [EPIC-SOUNDS Dataset](https://epic-kitchens.github.io/epic-sounds/) for both [Auditory Slow-Fast](https://github.com/ekazakos/auditory-slow-fast) and [Self-Supervised Audio Spectrogram Transformer (SSAST)](https://github.com/YuanGongND/ssast).
 
+**NOTE:** The output predictions of these models are put into a `.pkl` format, which can be converted into a JSON submittable format for the EPIC-SOUNDS: Audio-based interaction recognition challenge [here](https://github.com/epic-kitchens/C9-epic-sounds).
+
 ## Pretrained Models
 
 You can download our pretrained models on EPIC-SOUNDS:
@@ -46,6 +48,8 @@ The dataset in this codebase uses a HDF5 Audio Dataset containing all the raw au
 **NOTE:** For this directory, you should install and pass arugments for the `.pkl` annotation files only, rather than the `.csv` files.
 
 ## Training/validating on EPIC-SOUNDS
+
+**NOTE:** By default, weights and biases is enabled to track training runs. This requires an internet connection for an online run. If this is not possible, but you still wish to track the model, you can run an offline version which you can later sync to weights and biases by updating the environment variable before the python command e.g. `WANDB_MODE=offline python ...`. Alternatively, if you do not require to track the model at all, you can disable this feature with `WANDB.ENABLE False`.
 
 To fine-tune Slow-Fast on EPIC-Sounds, run:
 
