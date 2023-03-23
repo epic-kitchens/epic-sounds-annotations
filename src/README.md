@@ -49,7 +49,7 @@ The dataset in this codebase uses a HDF5 Audio Dataset containing all the raw au
 
 ## Training/validating on EPIC-SOUNDS
 
-**NOTE:** By default, weights and biases is enabled to track training runs. This requires an internet connection on your machine/node for an online run by default. If this is not possible, but you still wish to track the model, you can run an offline version which you can later sync to weights and biases by updating the environment variable before the python command e.g. `WANDB_MODE=offline python ...`. Alternatively, if you do not require to track the model at all, you can disable this feature with `WANDB.ENABLE False`.
+**NOTE:** By default, weights and biases is disabled for tracking training runs. If enabled, it requires an internet connection on your machine/node for an online run by default. If this is not possible, but you still wish to track the model, you can run an offline version which you can later sync to weights and biases by updating the environment variable before the python command e.g. `WANDB_MODE=offline python ...` and passing the argument `WANDB.ENABLE True`.
 
 To fine-tune Slow-Fast on EPIC-Sounds, run:
 
