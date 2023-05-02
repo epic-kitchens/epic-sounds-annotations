@@ -11,9 +11,9 @@ import slowfast.utils.logging as logging
 from .build import DATASET_REGISTRY
 from .epicsounds_record import EpicSoundsRecord
 
-from .spec_augment import combined_transforms
-from . import utils as utils
+from slowfast.utils.spec_augment import combined_transforms
 from .audio_loader_epicsounds import pack_audio
+from . import utils as utils
 
 logger = logging.get_logger(__name__)
 
