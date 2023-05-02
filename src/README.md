@@ -30,12 +30,11 @@ If using conda, you can install the requirements with the following commands in 
 - [psutil](https://psutil.readthedocs.io/en/latest/) `conda install -c conda-forge psutil`
 - [pandas](https://pandas.pydata.org/pandas-docs/stable/index.html) `conda install pandas`
 - [timm](https://huggingface.co/docs/timm/index) `conda install -c conda-forge timm`
-- [SpecAugment with Pytorch](https://github.com/zcaceres/spec_augment)
 
-You will also need to export the `slowfast` directory and "SpecAugment with PyTorch" to your Python path with:
+You will also need to export the `slowfast` directory to your Python path with:
 
 ```(python)
-export PYTHONPATH=<path-to-spec-augment>:<path-to-epic-sounds-annotations-directory>/slowfast:$PYTHONPATH
+export PYTHONPATH=<path-to-epic-sounds-annotations-directory>/slowfast:$PYTHONPATH
 ```
 
 ### Downloading EPIC-SOUNDS
