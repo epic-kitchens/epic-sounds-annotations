@@ -12,8 +12,8 @@ You can download our pretrained models on EPIC-SOUNDS:
 - [SSAST](https://www.dropbox.com/s/p0wgjl5akmshfha/SSAST_EPIC_SOUNDS.pyth?dl=0)
 
 You can also download the initial pretrained models on VGG (SlowFast) and AudioSet+LibriSpeech (SSAST):
-- [SlowFast (VGG)](https://www.dropbox.com/home/EPIC-SOUNDS%20Pretrained%20Models?preview=SLOWFAST_VGG.pyth)
-- [SSAST (AudioSet+LibriSpeech)](https://www.dropbox.com/home/EPIC-SOUNDS%20Pretrained%20Models?preview=SSAST-Base-Patch-400.pth)
+- [SlowFast (VGG)](https://www.dropbox.com/s/nmmvmcy988n19ks/SLOWFAST_VGG.pyth?dl=0)
+- [SSAST (AudioSet+LibriSpeech)](https://www.dropbox.com/s/5d8un14h8xthemt/SSAST-Base-Patch-400.pth?dl=0)
 
 ## Setup
 
