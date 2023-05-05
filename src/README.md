@@ -43,7 +43,7 @@ export PYTHONPATH=<path-to-epic-sounds-annotations-directory>/slowfast:$PYTHONPA
 
 ### Downloading EPIC-SOUNDS
 
-The dataset in this codebase uses a HDF5 Audio Dataset containing all the raw audio samples from the [EPIC-KITCHENS-100](https://epic-kitchens.github.io/2022) videos. To install, complete the steps as follow:
+The dataset in this codebase uses an HDF5 Audio Dataset containing all the raw audio samples from the [EPIC-KITCHENS-100](https://epic-kitchens.github.io/2022) videos. To install, complete the steps as follow:
 
 - From the [annotation repository of EPIC-SOUNDS](https://github.com/epic-kitchens/epic-sounds-annotations) e.g. the parent directory of this `src` folder, download: `EPIC_Sounds_train.pkl`, `EPIC_Sounds_validation.pkl` and `EPIC_Sounds_recognition_test_timestamps.pkl`. `EPIC_Sounds_train.pkl`, `EPIC_Sounds_validation.pkl` may be used for training and validation, whilst `EPIC_Sounds_recognition_test_timestamps.pkl` can be used to generate an output that can be converted into a submission to the [Audio-Bassed Interaction Recognition Challenge](https://github.com/epic-kitchens/C9-epic-sounds).
 - Extract the untrimmed audios from the videos, using the downloader [here](https://github.com/epic-kitchens/download-scripts-100). Instructions on how to extract and format the audio into a HDF5 dataset can be found on the [Auditory SlowFast](https://github.com/ekazakos/auditory-slow-fast) GitHub repo. Alternatively, you can email [uob-epic-kitchens@bristol.ac.uk](mailto:uob-epic-kitchens@bristol.ac.uk)  for access to an existing HDF5 file.
