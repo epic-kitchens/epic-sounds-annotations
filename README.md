@@ -8,13 +8,13 @@ A download script is provided for the videos [here](https://github.com/epic-kitc
 **Contact:** [uob-epic-kitchens@bristol.ac.uk](mailto:uob-epic-kitchens@bristol.ac.uk)
 
 ## Citing
-When using the dataset, kindly [reference our ArXiv Paper](https://arxiv.org/abs/2302.00646):
+When using the dataset, kindly [reference our ICASSP 2023 Paper](https://arxiv.org/abs/2302.00646):
 ```
-@article{epicsounds2023,
-   title={E{PIC}-{SOUNDS}: A LARGE-SCALE DATASET OF ACTIONS THAT SOUND},
-   author={Huh, Jaesung and Chalk, Jacob and Kazakos, Evangelos and Damen, Dima and Zisserman, Andrew},
-   journal={ArXiv},
-   year={2023}
+@inproceedings{EPICSOUNDS2023,
+           title={{EPIC-SOUNDS}: {A} {L}arge-{S}cale {D}ataset of {A}ctions that {S}ound},
+           author={Huh, Jaesung and Chalk, Jacob and Kazakos, Evangelos and Damen, Dima and Zisserman, Andrew},
+           booktitle   = {IEEE International Conference on Acoustics, Speech, & Signal Processing (ICASSP)},
+           year      = {2023}
 } 
 ```
 
