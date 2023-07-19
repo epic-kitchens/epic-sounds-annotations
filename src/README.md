@@ -6,7 +6,7 @@ The code in this repo is a condensed clone from [https://github.com/facebookrese
 
 ## Pretrained Models
 
-You can download our pretrained models on EPIC-SOUNDS:
+You can download our fine-tuned models on EPIC-SOUNDS:
 
 - [SlowFast](https://www.dropbox.com/s/339zsc6kz6c3wz9/SLOWFAST_EPIC_SOUNDS.pyth?dl=0)
 - [SSAST](https://www.dropbox.com/s/p0wgjl5akmshfha/SSAST_EPIC_SOUNDS.pyth?dl=0)
@@ -63,7 +63,7 @@ NUM_GPUS num_gpus \
 OUTPUT_DIR /path/to/outpur_dir \
 EPICSOUNDS.AUDIO_DATA_FILE /path/to/EPIC_audio.hdf5 \
 EPICSOUNDS.ANNOTATIONS_DIR /path/to/annotations \
-TRAIN.CHECKPOINT_FILE_PATH /path/to/SLOWFAST_EPIC_SOUNDS.pyth
+TRAIN.CHECKPOINT_FILE_PATH /path/to/SLOWFAST_VGG.pyth
 ```
 
 To fine-tune Self-Supervised Spectrogram Transformer, run:
@@ -75,7 +75,7 @@ NUM_GPUS num_gpus \
 OUTPUT_DIR /path/to/outpur_dir \
 EPICSOUNDS.AUDIO_DATA_FILE /path/to/EPIC_audio.hdf5 \
 EPICSOUNDS.ANNOTATIONS_DIR /path/to/annotations \
-TRAIN.CHECKPOINT_FILE_PATH /path/to/SSAST_EPIC_SOUNDS.pyth
+TRAIN.CHECKPOINT_FILE_PATH /path/to/SSAST-Base-Patch-400.pth
 ```
 
 To train either model from scratch, remove the argument `TRAIN.CHECKPOINT_FILE_PATH`. To train a linear probe model, add the argument `MODEL.FREEZE_BACKBONE True`.
