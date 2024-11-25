@@ -50,7 +50,7 @@ This CSV file contains the annotations for the training set and contains 10 colu
 | `stop_sample`         | int                        | `127560`       | Index of the stop audio sample (24KHz) in the untrimmed audio of `video_id`   |
 | `description`         | string                     | `paper rustle` | Transcribed English description provided by the annotator.                    |
 | `class`               | string                     | `rustle`       | Parsed class from the description.                                            |
-| `class_id`            | int                        | `3`            | Numeric ID of the class.                                                      |
+| `class_id`            | int                        | `4`            | Numeric ID of the class.                                                      |
 
 #### EPIC_Sounds_validation.csv
 
@@ -67,7 +67,7 @@ This CSV file contains the annotations for the validation set and contains 10 co
 | `stop_sample`         | int                        | `127560`       | Index of the stop audio sample (24KHz) in the untrimmed audio of `video_id`   |
 | `description`         | string                     | `paper rustle` | Transcribed English description provided by the annotator.                    |  
 | `class`               | string                     | `rustle`       | Parsed class from the description.                                            |
-| `class_id`            | int                        | `3`            | Numeric ID of the class.                                                      |
+| `class_id`            | int                        | `4`            | Numeric ID of the class.                                                      |
 
 #### EPIC_Sounds_recognition_test_timestamps.csv
 
