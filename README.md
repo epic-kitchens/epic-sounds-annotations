@@ -8,7 +8,17 @@ A download script is provided for the videos [here](https://github.com/epic-kitc
 **Contact:** [uob-epic-kitchens@bristol.ac.uk](mailto:uob-epic-kitchens@bristol.ac.uk)
 
 ## Citing
-When using the dataset, kindly [reference our ICASSP 2023 Paper](https://arxiv.org/abs/2302.00646):
+When using this work, please cite the [TPAMI 2025](https://ieeexplore.ieee.org/document/11084841) (or [ICASSP 2023](https://ieeexplore.ieee.org/document/10096198)) paper from EPIC-SOUNDS as well as the IJCV paper of the original audio-visual recordings Rescaling Egocentric Vision.
+
+```
+@ARTICLE{EPICSOUNDS2025,
+           title={{EPIC-SOUNDS}: {A} {L}arge-{S}cale {D}ataset of {A}ctions that {S}ound},
+           author={Huh, Jaesung and Chalk, Jacob and Kazakos, Evangelos and Damen, Dima and Zisserman, Andrew},
+           journal   = {IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)},
+           year      = {2025}
+}
+```
+
 ```
 @inproceedings{EPICSOUNDS2023,
            title={{EPIC-SOUNDS}: {A} {L}arge-{S}cale {D}ataset of {A}ctions that {S}ound},
